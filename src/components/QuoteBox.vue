@@ -45,6 +45,7 @@ export default {
   // border: 2px dotted yellow;
   max-width: 30vw;
   color: white;
+  grid-row: -1;
 
   &--quote {
     font-size: 20px;

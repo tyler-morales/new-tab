@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" :style="imageStyleObject">
     <Clock />
     <QuoteBox />
   </div>
@@ -8,6 +8,7 @@
 <script>
 import QuoteBox from '@/components/QuoteBox'
 import Clock from '@/components/Clock'
+import axios from 'axios'
 
 export default {
   name: 'App',
@@ -17,9 +18,34 @@ export default {
   },
   data() {
     return {
-      info: '',
-      loading: true,
-      errored: false
+      image: ''
+    }
+  },
+  methods: {
+    renderImage: function() {
+      axios
+        .get(
+          // 'https://api.unsplash.com/photos/random/?client_id=8rzeKbxcD7bHreUEfXY7wpS4VfYNHg1NTMBqucML0iw'
+        )
+        .then(response => {
+          console.log([response.data, response.data.location.title])
+          console.log('🎉 Image loaded succesfully')
+          this.image = response.data.urls.regular
+        })
+    }
+  },
+  mounted: function() {
+    this.renderImage()
+  },
+  computed: {
+    // will be re-computed when the image property changes
+    imageStyleObject() {
+      return {
+        backgroundImage: `linear-gradient(to bottom,rgba(245, 246, 252, 0) 45%,rgb(0, 0, 0) 100%), url(${this.image})`,
+        backgrountRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }
     }
   }
 }
@@ -32,24 +58,15 @@ export default {
   box-sizing: border-box;
 }
 
-body {
+#app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   color: white;
-  background: linear-gradient(
-      to bottom,
-      rgba(245, 246, 252, 0) 45%,
-      rgb(0, 0, 0) 100%
-    ),
-    url('https://upload.wikimedia.org/wikipedia/commons/a/a5/Tsunami_by_hokusai_19th_century.jpg')
-      no-repeat center fixed;
-  background-size: cover;
+  background-color: black;
   max-width: 100vw;
   height: 100vh;
   align-items: end;
   padding: 75px;
   display: grid;
+  grid-template-rows: repeat(12, 1fr);
 }
 </style>
-
-https://api.artic.edu/api/v1/artworks/238800
-https://api.artic.edu/image-service/abcd1234/full/max/0/default.jpg

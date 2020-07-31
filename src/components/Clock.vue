@@ -24,6 +24,7 @@ export default {
 
 <style lang="scss" scoped>
 h1 {
-  margin-bottom: 50px;
+  // margin-bottom: 50px;
+  grid-row: 11;
 }
 </style>
