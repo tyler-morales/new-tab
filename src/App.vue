@@ -1,17 +1,26 @@
 <template>
   <div id="app">
-    <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
+    <Clock />
     <QuoteBox />
   </div>
 </template>
 
 <script>
 import QuoteBox from '@/components/QuoteBox'
+import Clock from '@/components/Clock'
 
 export default {
   name: 'App',
   components: {
-    QuoteBox
+    QuoteBox,
+    Clock
+  },
+  data() {
+    return {
+      info: '',
+      loading: true,
+      errored: false
+    }
   }
 }
 </script>
@@ -25,7 +34,7 @@ export default {
 
 body {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  color: #2c3e50;
+  color: white;
   background: linear-gradient(
       to bottom,
       rgba(245, 246, 252, 0) 45%,
@@ -37,8 +46,10 @@ body {
   max-width: 100vw;
   height: 100vh;
   align-items: end;
-  padding: 100px;
-
+  padding: 75px;
   display: grid;
 }
 </style>
+
+https://api.artic.edu/api/v1/artworks/238800
+https://api.artic.edu/image-service/abcd1234/full/max/0/default.jpg

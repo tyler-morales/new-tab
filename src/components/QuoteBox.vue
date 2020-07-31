@@ -23,7 +23,7 @@ export default {
         .get('https://api.quotable.io/random')
         .then(response => {
           this.info = response.data
-          console.log('🎉 Data loaded succesfully')
+          console.log('🎉 Quote loaded succesfully')
         })
         .catch(error => {
           console.log(error)
