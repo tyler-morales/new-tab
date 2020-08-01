@@ -5,7 +5,9 @@
     <div class="unsplash-img">
       <span class="unsplash-img--location">{{ locationName }}</span>
       <span class="unsplash--img--photog">
-        <a v-bind:href="url" target="_blank" rel="noopener noreferrer">{{ name }}</a>
+        <a v-bind:href="url" target="_blank" rel="noopener noreferrer">{{
+          name
+        }}</a>
       </span>
     </div>
   </div>
@@ -85,6 +87,10 @@ export default {
   a {
     text-decoration: none;
     color: inherit;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   .unsplash-img {
