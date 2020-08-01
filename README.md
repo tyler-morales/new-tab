@@ -1,5 +1,5 @@
 # Random New Tab
-
+![New Tab Screenshot](src/assets/screenshot.png)
 ## How-to install Chrome Extension
 1) Go to [tab-page](https://chrome.google.com/webstore/detail) on the Chrome extension store adn install
 2) That's it 🎉! What you load a new tab just make sure to say yes to keep for new tabs
