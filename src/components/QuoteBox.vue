@@ -1,8 +1,9 @@
 <template>
   <blockquote class="quote-box">
     <p class="quote-box--quote">"{{ info.content }}"</p>
-    <footer class="quote-box--author">– {{ info.author }}</footer>
-    <!-- <button @click="getRandomQuote">Get quote</button> -->
+    <footer class="quote-box--author">
+      <a :href="authorLink" target="_blank"> – {{ info.author }} </a>
+    </footer>
   </blockquote>
 </template>
 
@@ -34,6 +35,11 @@ export default {
   },
   mounted: function() {
     this.getRandomQuote()
+  },
+  computed: {
+    authorLink: function() {
+      return `https://en.wikipedia.org/wiki/${this.info.author}`
+    }
   }
 }
 </script>
@@ -42,7 +48,6 @@ export default {
 .quote-box {
   display: grid;
   gap: 20px;
-  // border: 2px dotted yellow;
   max-width: 30vw;
   color: white;
   grid-row: -1;

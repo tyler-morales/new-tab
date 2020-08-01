@@ -4,9 +4,9 @@
     <QuoteBox />
     <div class="unsplash-img">
       <span class="unsplash-img--location">{{ locationName }}</span>
-      <span class="unsplash--img--photog"
-        ><a v-bind:href="url">{{ name }}</a></span
-      >
+      <span class="unsplash--img--photog">
+        <a v-bind:href="url">{{ name }}</a>
+      </span>
     </div>
   </div>
 </template>
@@ -34,7 +34,7 @@ export default {
     renderImage: function() {
       axios
         .get(
-          'https://api.unsplash.com/photos/random/?client_id=8rzeKbxcD7bHreUEfXY7wpS4VfYNHg1NTMBqucML0iw&query=nature&orientation=landscape'
+          // 'https://api.unsplash.com/photos/random/?client_id=8rzeKbxcD7bHreUEfXY7wpS4VfYNHg1NTMBqucML0iw&query=nature&orientation=landscape'
         )
         .then(response => {
           console.log([response.data, response.data.location.title])
