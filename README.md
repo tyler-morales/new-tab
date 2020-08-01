@@ -1,4 +1,5 @@
 # Random New Tab
+
 ## Overview
 Replace a new tab page with a beautiful dashboard featuring amazing images, inspirational quotes & a clock
 
