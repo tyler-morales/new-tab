@@ -2,7 +2,9 @@
   <blockquote class="quote-box">
     <p class="quote-box--quote">"{{ info.content }}"</p>
     <footer class="quote-box--author">
-      <a :href="authorLink" target="_blank"> – {{ info.author }} </a>
+      <a :href="authorLink" target="_blank" rel="noopener noreferrer">
+        – {{ info.author }}
+      </a>
     </footer>
   </blockquote>
 </template>
