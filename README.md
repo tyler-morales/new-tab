@@ -1,8 +1,9 @@
 # Random New Tab
 ![New Tab Screenshot](src/assets/screenshot.png)
 ## How-to: Install Chrome Extension
-1) Go to [tab-page](https://chrome.google.com/webstore/detail) on the Chrome extension store adn install
-2) That's it 🎉! When you load a new tab just make sure to say yes to keep the extension
+🚧 Pending review from Chrome
+<!-- 1) Go to [tab-page](https://chrome.google.com/webstore/detail) on the Chrome extension store and install
+2) That's it 🎉! When you load a new tab just make sure to say yes to keep the extension -->
 
 ## How-to: Install on Firefox
 1) Install [Custom New new tab page](https://addons.mozilla.org/en-US/firefox/addon/custom-new-tab-page/)
