@@ -34,9 +34,11 @@ export default {
   },
   methods: {
     renderImage: function() {
+      const CLIENT_ID = '8rzeKbxcD7bHreUEfXY7wpS4VfYNHg1NTMBqucML0iw'
+      let search_query = 'nature'
       axios
         .get(
-          'https://api.unsplash.com/photos/random/?client_id=8rzeKbxcD7bHreUEfXY7wpS4VfYNHg1NTMBqucML0iw&query=nature&orientation=landscape'
+          `https://api.unsplash.com/photos/random/?client_id=${CLIENT_ID}&query=${search_query}&orientation=landscape`
         )
         .then(response => {
           console.log([response.data, response.data.location.title])
