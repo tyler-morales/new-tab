@@ -9,7 +9,7 @@
 2) Open `Add-ons` from the `Menu (☰)` (or navigate to `about:addons` with the address bar)
 3) Select `Extensions`
 4) Select the `Custom New Tab Page` extension → `Options`
-5) Enter `https://fervent-johnson-f15c21.netlify.app` in the `New Tab URL` box
+5) Enter `https://beautiful-tab.netlify.app/` in the `New Tab URL` box
 6) Press `Save` & you're done 🎉
 
 ## Overview
